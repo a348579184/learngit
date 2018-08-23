@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        html,body{
+            height:100%;
+        }
+        canvas{
+            background:#000;
+            display:block;
+        }
+    </style>
+</head>
+<body>
+   <canvas id="canvas"></canvas>
+</body>
+<script>
+    function random(min,max){
+        return Math.random()*(max-min)+min;
+    }
+    var can=document.getElementById("canvas");
+    var ctx=can.getContext("2d");
+    var w=can.width=window.innerWidth;
+    var h=can.height=window.innerHeight;
+    var drops=[];
+    function drop(){}
+    drop.prototype={
+        init:function(){
+            this.x=random(0,w);
+            this.y=0;
+            this.l=random(0.8*h,0.9*h);
+            this.vy=random(4,5);
+            this.r=1;
+            this.vr=1;
+            this.a=1;
+            this.va=0.95;
+        },
+        draw:function(){
+            if(this.y>this.l){
+                ctx.beginPath();
+                ctx.arc(this.x,this.y,this.r,0,2*Math.PI);
+                ctx.strokeStyle="rgba(0,255,255,"+this.a+")";
+                ctx.stroke();
+                if(this.a>0.03){
+                    this.r+=this.vr;
+                    if(this.r>50){
+                    this.a*=this.va;}
+                }else{
+                    this.init();
+                }
+            }else{
+                ctx.fillStyle="rgb(0,255,255)";
+                ctx.fillRect(this.x,this.y,2,10);
+                this.y+=this.vy;
+            }
+        }
+    };
+    setInterval(function(){
+        var d1=new drop();
+        d1.init();
+        drops.push(d1);
+    },500)
+    function task(){
+        ctx.fillStyle="rgba(0,0,0,0.1)";
+        ctx.fillRect(0,0,w,h);
+        for(var i=0;i<drops.length;i++){
+            drops[i].draw();
+        }
+        requestAnimationFrame(task);
+    }
+    task();
+
+</script>
+</html>
