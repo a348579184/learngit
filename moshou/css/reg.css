@@ -1,0 +1,98 @@
+ body{
+            background: #0D1E30;
+        }
+        .reg{
+            width: 500px;
+            margin: auto;
+        }
+        .cre{
+            color: white;
+            font-size: 35px;
+            margin-top: 60px;
+            margin-bottom: 28px;
+            text-align: center;
+        }
+        .btn1{
+            height: 40px;
+            width: 500px;
+            background: #D60000;
+            text-align: center;
+            font-size: 15px;
+            outline: auto;
+            border: none;
+        }
+        .btn1>a{
+            color: white;
+        }
+        .sp{
+            text-align: center;
+            font-size: 20px;
+            color: #566265;
+            padding-top: 20px;
+        }
+        .header{
+            font-size: 18px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            color: rgba(255,255,255,.8);
+        }
+        #uid,#uname,#email,#upwd{
+            background: #060F18;
+            font-size: 16px;
+            width: 500px;
+            height: 30px;
+            margin: 10px 10px;
+            border: 1px solid #7F8488;
+            color: white;
+        }
+        .ty{
+            width: 20px;
+            height: 20px;
+            position: relative;
+            top: 5px;
+        }
+        .pol{
+            display: inline-block;
+           font-size: 18px;
+            line-height: 20px;
+            color: rgba(255,255,255,.8);
+        }
+        .xy{
+            font-size: 16px;
+            color: rgba(255,255,255,.8);
+            position: relative;
+            top: 50px;
+        }
+        .xy>a{
+            font-size: 16px;
+            color: #00aeff;
+        }
+        .fr{
+            background: #0E86CA;
+            height: 34px;
+            width: 500px;
+            border: none;
+            outline: none;
+            font-size: 15px;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+        .fr>span{
+            color: white;
+        }
+        .sf{
+            width: 500px;
+            height: 30px;
+        }
+        .sf{
+            width: 500px;
+            height: 40px;
+            font-size: 15px;
+            text-align: center;
+            background: #08121D;
+            border: 1px solid #0D639F;
+            line-height: 40px;
+        }
+        .sf>a{
+            color: #00AEDB;;
+        }

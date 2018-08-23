@@ -1,0 +1,363 @@
+body,div,p,h1,h2,h3,h4,h5,ul{
+				padding: 0;
+				margin: 0;
+			}
+			body{
+				background: black;
+			}
+			a{
+				text-decoration: none;
+			}
+			header{
+				background: rgb(11,13,18);
+				width:100%;
+				height:50px;
+			}
+			header>.bli{
+				float: left;
+				margin-left:60px;
+				margin-top:5px;
+			}
+			header>.head-left{
+				margin-left: 200px;
+			}
+			header>.head-left>div{
+				float: left;
+				padding:13px 30px 10px 10px;
+			}
+			header a{
+				text-decoration: none;
+				color:rgb(153,154,156);
+			}
+			header a:hover{
+				color:white;
+			}
+			header>.head-right{
+				float:right;
+				padding-right: 100px;
+			}
+			nav{
+				float: left;z-index: 10;
+				clear: left;
+				width:80%;
+				height: 80px;
+				margin:50px 30px 20px 220px;
+				position: relative;
+				background: rgb(25,14,10);
+				transition: all .1s linear 0s;
+			}
+			.nav1{
+				width:100%;
+				height: 40px;
+				margin:0;
+			}
+			nav>.img{
+				background:url('../img/ind/index/logo.png');
+				background-size:100%;
+				background-repeat: no-repeat;
+				width: 256px;
+				height: 104px;
+				position: absolute;
+				left:-190px;
+				top:-10px
+			}
+			.nav1>.img{
+				background:url('../img/ind/index/logo1.PNG');
+				background-size:100%;
+				background-repeat: no-repeat;
+				width:40px;
+				height:40px;
+				top:0px;
+				left:20px;
+			}
+			nav a{
+				color:#FFE558;
+				font-size: 16px;
+				line-height: 80px;
+			}
+			.nav1 a{
+				line-height: 40px;
+			}
+			nav a:hover{
+				color:white;
+			}
+			nav>.nav-left{
+				margin-left:60px
+			}
+			nav>.nav-left>div{
+				margin-left: 30px;
+				float:left;
+			}
+			nav>.nav-right{
+				float:right;
+			}
+			nav>.nav-right img{
+				width:24px;
+				height: 24px;
+				display: inline-block;
+				margin-top:30px;
+				cursor: pointer;
+			}
+			.nav1>.nav-right img{
+				margin-top:8px;
+			}
+			nav .free{
+				padding:0 15px;
+				height:80px;
+				background:rgb(90,27,15);
+				transition: all .1s linear 0s;
+			}
+			.nav1 .free{
+				height: 40px;
+			}
+			.title{
+                position: relative;
+			    width: 100%;
+			    height: 900px;
+			}
+			.title .round{
+				position: absolute;
+				top:0;
+				left:0;
+				width:100%;
+				height:100%;
+				overflow: hidden;
+			}
+			.title .round>img{
+				width:100%;
+				height:100%;
+				position: absolute;
+				top: 0;
+				left:0;
+				display: block;
+				opacity: 0;
+				transition:all 1.5s linear 0s;
+			}
+			.title .round>img:first-child{
+				opacity:1;
+			}
+
+			.title > div{
+				clear:left;
+				float: left;
+			}
+			.title .dd{
+				position:absolute;
+				top:150px;
+			}
+			.title .d1{
+				margin-top: 80px;
+				margin-left: 50px;
+			}
+			div h1{
+				font-size: 50px;
+				COLOR:white;
+			}
+			.title .d2{
+				margin:50px 0 0 50px;
+			}
+			div h2{
+				font-size: 25px;
+				color:#A39A86;
+			}
+			.title .d3{
+				margin:50px 0 0 50px
+			}
+			div button{
+				color:#E4A309;
+				font-size:20px ;
+				width:180px;
+				height:50px;
+				margin-right: 15px;
+				border-radius:2px ;
+				cursor: pointer;
+			}
+			 .buy{
+				background-color:rgb(95,13,0);
+				border:2px solid #EA3012;
+			}
+			 .know{
+				background-color:black;
+				border:2px solid #C77E19;
+				 transition: all 1s linear 0s;
+			}
+			.buy:hover{
+				color:white;
+				background-color:#BB4444;
+			}
+			.know:hover{
+				color:white;
+				background-color: #C77E19;
+			}
+			/*流光*/
+		.image {
+			position: relative;
+			overflow:hidden;
+		}
+		.image1{
+			position: relative;
+			overflow:hidden;
+		}
+		.em {
+			position: absolute;
+			display:block;
+			width: 30px;
+			height: 450px;
+			background:#fff;
+			top: 0;
+			left: -400px;
+			transform: skewX(-30deg);
+			background:linear-gradient(0deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0));
+		}
+		.image:hover .em {
+			left:570px;
+			transition: all 2s ease;
+		}
+		.image1:hover .em {
+			left:1700px;
+			transition: all 2s ease;
+		}
+           /*流光*/
+			.title0{
+				position: absolute;
+				width:84%;
+				margin:30px auto;
+				height:00px;
+				display:flex;
+				justify-content: space-between;
+                top:580px;
+				left:7%
+			}
+			.title0>div{
+				width:320px;
+				height:180px;
+			}
+			.title0>div>a{
+				color:rgb(181,168,0);
+				line-height:300px;
+				font-size: 20px;
+				margin-left:20px;
+				font-weight:600;
+			}
+			.bg1{
+				width:100%;
+				height:400px;
+				text-align: right;
+				position:relative;
+			}
+			.bg1 .know{
+				position:absolute;
+				top:65%;
+				left:75%;
+			}
+			.bg1>h1{
+				margin-right:150px;
+				padding-top:100px;
+			}
+			.bg1>button,h2{
+				margin:30px 150px 0 0;
+			}
+			.bg-3{
+				margin-top:10px;
+				margin-bottom:10px;
+				width:100%;
+				display: flex;
+				justify-content: space-around;
+				flex-wrap: wrap;
+			}
+			.bor{
+				border:2px solid rgb(247,182,0);
+			}
+			.bg-3>div{
+				width:33%;
+				border-radius:3px;
+				background: rgb(33,21,16);
+			}
+			.bg-3>div>img{
+				width:100%;
+			}
+			.bg-3>div>h2{
+				margin-left:31%;
+				font-size:20px;
+				margin-top:0;
+			}
+			.bg-3>div>h1{
+				margin-left:42%;
+				color:rgb(247,182,0);
+				font-size: 30px;
+			}
+			.bg-3>.sum4{
+				width:49.3%;
+			}
+			.bg-3>.bor:hover{
+				transform: scale(1.02);
+			}
+		.foot1{
+			width:98%;
+			height:230px;
+			overflow: hidden;
+			position: relative;
+		}
+		.foot1>div{
+			width:229%;
+			height:230px;
+			position: absolute;
+			left:0;
+			transition:all .1s linear 0s;
+		}
+		.foot1>div> .fli{
+			width:230px;
+			height:230px;
+			display: inline-block;
+		}
+		.foot1>#model{
+			width:100%;
+			height:230px;
+			position: absolute;
+			left:0;
+			z-index: 10;
+		}
+		div .fli>img{
+			width:200px;
+			height:200px;
+			display: inline-block;
+			border-radius: 50%;
+		}
+		.foot{
+			width:100%;
+			height:500px;
+			text-align: center;
+			color:rgb(172,172,172);
+			position: relative;
+			background:rgba(20,12,9);
+		}
+		canvas{
+			background:#140C09;
+			display:block;
+			position: absolute;
+			top:0;
+			left:0;
+			width:100%;
+			height:100%;
+			opacity: 0.5;
+			z-index: -2;
+		}
+		#log{
+			padding: 50px 0px 0px 0;
+		}
+		.foot div>a{
+			text-decoration: none;
+			color:rgb(172,172,172);
+			display: inline-block;
+			padding : 15px 15px;
+			font-size: 19px;
+		}
+		.foot div>a:hover{
+			color:white;
+		}
+		.foot h6{
+			padding: 0;
+			margin: 0;
+		}
+
+

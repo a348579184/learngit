@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	div,body,img{padding:0;margin:0}
+	#dd{
+	position:relative;
+	top:-400px;
+	z-index:10;
+	opacity:0.5;
+	width:400px;
+	height:200px;
+	border:1px solid black;
+	float:left;
+	}  
+	#d1,img.small_img{
+		   width:400px;
+			 height:200px;
+		 }
+		 #d2{
+		 position:relative;
+		 width:400px;
+		 height:200px;
+		 overflow:hidden;
+		 }img.big_img{position:absolute;width:800px;height:400px;}
+		 div.model{
+		 width:200px;
+		 height:100px;
+		 position:absolute;
+		 border:1px solid black;
+		 opacity:0.3;
+		 background:#00ffff;
+		 visibility:hidden;
+		 }
+	</style>
+</head>
+<body>
+
+	<div id="d1">
+	<img src="1.png" alt="" class="small_img">
+	       <div class="model"></div>
+	</div>
+	<div id="d2"><img src="1.png" class="big_img" alt="" id="m2"></div><div id="dd"></div>
+</body>
+<script>
+  var dd=document.getElementById("dd");
+	var m2=document.getElementById("m2");
+	var model=document.getElementsByClassName("model")[0];
+	dd.onmouseenter=function(){
+		model.style.visibility="visible";
+	}
+	dd.onmouseleave=function(){
+		model.style.visibility="hidden";
+	}
+	dd.onmousemove=function(e){
+		var left=e.offsetX-100;
+		var top=e.offsetY-50;
+		if(top<0)top=0;
+		else if(top>100)top=100;
+		if(left<0)left=0;
+		else if(left>200)left=200;
+		console.log(left);
+		console.log(top);
+		model.style.left=left+"px";
+		model.style.top=top+"px";
+		m2.style.left=-left*2+"px";
+		m2.style.top=-top*2+"px";
+	}
+</script>
+</html>

@@ -1,0 +1,283 @@
+body,h1,h2,h3,h4,h5,h6,p,div{
+    padding: 0;
+    margin: 0;
+    cursor: default;
+}
+.imp{
+    color:yellowgreen;
+}
+a{
+    color:black;
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+ul{
+    list-style-position: outside;
+}
+header{
+    padding:8px 10% 8px 10%;
+}
+header>.left{
+    float:left
+}
+header>.right{
+    float:right;
+}
+header a{
+    font-size: 10px;
+    padding-left: 10px;
+    color:RGB(200,202,209);
+}
+nav{
+    padding:30px 10% 0 10%;
+}
+nav>img{
+    vertical-align: middle;
+}
+nav>a{
+    color:#101010;
+    font-size: 18px;
+    padding:0 18px 0 20px;
+}
+div.nav-cont{
+    padding:20px 10%;
+}
+div.nav-cont>.d1{
+    float: left;
+    display: inline-block;
+    width:200px;
+    background:rgb(102,102,102);
+    color:#8E897F;
+}
+div.nav-cont>.d2{
+    float: left;
+    height:100%;
+    width:1050px;
+    height:402.5px;
+    overflow: hidden;
+    position: relative;
+}
+div.nav-cont>.d1>p{
+    padding:13px 0 12px 15px;
+}
+div.nav-cont>.d1>p:hover{
+    color:white;
+    cursor: pointer;
+}
+div.nav-cont>.d2 img{
+    width:1200px;
+    height:403px;
+    opacity: 0;
+    position: absolute;
+    left:0;
+    top:0;
+    cursor: pointer;
+    transition: all 1s linear 0s;
+}
+div.nav-foot{
+    width:80%;
+    padding:20px 10%;
+    clear: both;
+}
+div.nav-foot .d1,.d3{
+    width:25%;
+    float:left;
+}
+div.nav-foot .d2{
+    width:50%;
+    float:left;
+}
+div.nav-foot>.d1 img{
+    width:70px;
+}
+div.nav-foot>.d2{
+    display: flex;
+    justify-content: space-around;
+}
+div.nav-foot>.d2>div{
+    width:65px;
+    height:70px;
+    float: left;
+    overflow: hidden;
+    position: relative;
+}
+div.nav-foot>.d2>div>img{
+    width:480px;
+    position: absolute;
+    cursor: pointer;
+}
+button{
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+.body0{
+    padding:30px 10%;
+    width:80%;
+    float: left;
+    display: flex;
+    justify-content: space-around;
+}
+.body0>div{
+    height:160px;
+    width:291px;
+    overflow: hidden;
+}
+.body0 img:hover{
+    transition: all .2s linear 0s;
+    transform: scale(1.1);
+}
+.body0>div:hover{
+    box-shadow:2px 2px 10px 2px grey;
+}
+body>div{
+    float: left;
+    padding-left: 10%;
+    clear: both;
+}
+.hot>div{
+    float: left;
+}
+.hot .d2{
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.hot>.d2>div{
+    height:300px;
+    cursor: pointer;
+}
+.hot>.d2 img{
+    width:240px;
+}
+.hot img:hover{
+    box-shadow:2px 2px 10px 2px grey;
+}
+.hot>.d2 p{
+    margin-left: 30%;
+}
+.hot .d2 p:nth-child(3){
+    color: red;
+}
+.great{
+    padding: 0;
+    margin-left: 10%;
+    width: 80%;
+    overflow: hidden;
+    position: relative;
+    height:260px;
+}
+.great img{
+    width:155px;
+    height:155px;
+    text-align: center;
+}
+.great>div{
+    transition: all .5s linear 0s;
+    position: absolute;
+    left:0;
+    width:500%;
+}
+.great>div>div{
+    margin-right:15px ;
+  float: left;
+    cursor: pointer;
+}
+.great p{
+    margin-left: 20%;
+}
+.great>div>div p:nth-child(3){
+    color:red;
+}
+.great>div>div:hover img{
+    box-shadow:2px 2px 10px 2px grey;
+}
+.great #btn-left,#btn-right{
+    position: absolute;
+    z-index: 100;
+    width:30px;
+    height:50px;
+    top:55px;
+    opacity: 0;
+    cursor: pointer;
+}
+.great:hover #btn-right{
+    opacity: 1;
+}
+.great:hover #btn-left{
+    opacity: 1;
+}
+.great #btn-left{
+    left:40px;
+}
+.great #btn-right{
+    right:40px;
+}
+.line>div{
+    float: left;
+}
+.line ul>li{
+    float: left;
+    font-size: 22px;
+    line-height: 50px;
+    padding:10px 20px 10px 20px;
+}
+.line a{
+    color: grey;
+}
+.line-con{
+    width:80%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.line-con>div{
+    width:24%;
+    height:360px;
+    margin-bottom: 5px;
+    text-align: center;
+    cursor: pointer;
+    line-height: 30px;
+    font-weight: 900;
+}
+.line-con>div img{
+    width:80%;
+    margin-left:5%;
+    margin-top: 5%;
+    height:65%;
+}
+.line-con>div span{
+    color: red;
+}
+.line-con img:hover{
+    box-shadow:2px 2px 10px 2px grey;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

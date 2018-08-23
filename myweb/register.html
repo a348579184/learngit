@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style>
+			body{
+				padding:0;
+				margin:0;
+				font-size: 16px;
+			}
+			.bor{
+				margin:0 auto;
+				width: 300px;
+				padding: 20px 15%;
+				box-shadow: 2px 0 46px rgba(0, 0, 0, 0.18);
+			}
+			h1{
+				font-weight:bold;
+			}
+			.font_style{
+				font-size: 16px;
+				margin-top:20px;
+				margin-bottom: 20px;
+			}
+			.border{
+				margin-top:10px;
+				width: 350px;
+				height: 40px;
+				line-height: 40px;
+				border: 1px solid red;
+				font-size: 25px;
+				border-radius: 5px;
+				padding: 10px;
+			}
+			.border input{
+				display: block;
+				margin-left:10px;
+				vertical-align: center;
+				border: 1px solid white;
+				outline: medium;
+				font-size:25px;
+			}
+			.tj{
+				display: block;
+				width: 370px;
+				height:50px;
+				font-size:30px;
+				line-height: 30px;
+				background: #f66f6a;
+				color: white;
+				border: none;
+				border-radius: 5px;
+				cursor:pointer;
+				margin-bottom:30px;
+			}
+			.tishi{
+				padding-top: 15px;
+				color:#a54b4a;
+			}
+			.cn{
+				border:1px solid black;
+				width:20px;
+				height:20px;
+			}
+			.cn1{
+				display: inline-block;
+				font-size:16px;
+				vertical-align: center;
+			}
+			.pp{
+				font-size: 14px;
+				font-style: italic;
+			}
+			.pp a{color:black;}
+			.img{
+				display: block;
+				padding-bottom: 30px;
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+		<div  class="img"><img src="img/logo.jpg" alt=""/></div>
+		<div class="bor">
+			<h1>立即注册</h1>
+			<div class="font_style">
+				<div>邮箱</div>
+				<div class="border">
+					<input type="text" class="input"  id="uname" name="uname" onblur="check_uname()"/>
+				</div>
+				<div id="showuname" class="tishi"></div>
+			</div>
+			<div class="font_style">
+				<div>密码</div>
+				<div class="border"><input type="text" class="input" id="upwd" name="upwd" onblur="check_upwd()"/></div>
+				<div id="showupwd" class="tishi"></div>
+			</div>
+			<div class="font_style">
+				<div>姓</div>
+				<div class="border">
+					<input type="text" class="input"  id="uxing" name="uxing" onblur="check_uxing()"/>
+				</div>
+				<div id="showuxing" class="tishi"></div>
+			</div>
+			<div class="font_style">
+				<div>名</div>
+				<div class="border">
+					<input type="text" class="input" id="uming" name="uming" onblur="check_uming()"/>
+				</div>
+				<div id="showuming" class="tishi"></div>
+			</div>
+			<div>
+				<div  class="cn1">
+				   <input type="checkbox" name="r1" id="r1" value="" class="cn"/>
+				   <label for="r1">我愿意接收华为为我推介的相关信息</label>
+				</div>
+				<div  class="cn1">
+				   <input type="checkbox" name="r2" id="r2" value="" class="cn"/>
+				   <label for="r2">我愿意接收华为信任的第三方合作伙伴为我推介的华为相关信息</label>
+				</div>
+			</div>
+			<p class="pp">* 提交此表格表明你同意接受华为的<a href="#">隐私保护条款</a>和<a href="#">使用条款</a>.</p>
+			<input type="button" value="注册" class="tj" onclick="login()"/>
+	</form>	
+	<script src="js/common.js"></script>
+	<script>
+	 function $(a){
+		 return document.getElementById(a);
+	 }
+		var num=3;
+		var mi=300;
+		var uname=$('uname');
+		var upwd=$('upwd');
+		var uxing=$('uxing');
+		var uming=$('uming');
+		function check_uname(){
+			if(uname.value==""){
+				showuname.innerHTML="邮箱 不能为空！";
+			}
+		}
+		function check_upwd(){
+			if(upwd.value==""){
+				showupwd.innerHTML="密码 不能为空！";
+			}
+		}
+		function check_uxing(){
+			if(uxing.value==""){
+				showuxing.innerHTML="姓 不能为空！";
+			}
+		}
+		function check_uming(){
+			if(uming.value==""){
+				showuming.innerHTML="名不能为空！";
+			}
+		}
+		function login(){
+			if(uname.value!=""&&upwd.value!=""){
+			var xhr=new XMLHttpRequest();
+			xhr.onreadystatechange=function(){
+				if(xhr.readyState==4&&xhr.status==200){
+					var res=xhr.responseText;
+					console.log(res);
+					if(res=='exists'){
+						alert("用户名已经存在！");
+					}else if(res=='ok'){
+						alert("注册成功");
+						location.replace("../index.html");
+					}
+				}
+			}
+			xhr.open("get","php/register.php?uname="+uname.value+"&upwd="+upwd.value+"&uxing="+uxing.value+"&uming="+uming.value,true);
+			xhr.send(null);
+		}
+	}
+		
+	</script>
+	</body>
+</html>

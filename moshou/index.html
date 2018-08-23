@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" href="css/index.css" />
+		<link rel="stylesheet" href="css/float.css">
+		<link rel="stylesheet" href="css/animate.css">
+		<style>
+			.title0>div:nth-child(1) {
+				animation: bounceInUp 1s linear;
+			}
+			.title0>div:nth-child(2) {
+				animation: bounceInUp 1.3s linear;
+			}
+			.title0>div:nth-child(3) {
+				animation: bounceInUp 1.6s linear;
+			}
+			.title0>div:nth-child(4) {
+				animation: bounceInUp 1.9s linear;
+			}
+			.forin {
+				 animation: rollIn 1.5s linear;}
+			.forin1{
+				animation: bounceInUp 1.5s linear;
+			}
+			.font-tx{
+				display:none;
+			}
+			body:nth-child(5){
+				display:none;
+			}
+			.wrap{
+				height: 400px;
+				background: black;
+				position: relative;
+				transform-style: preserve-3d;
+				perspective: 600px;
+				/*定义一个3D空间*/
+			}
+			.wrap img{
+				width: 300px;
+				height: 200px;
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				margin-top: -100px;
+				margin-left: -150px;
+				transition: 1s;
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<img src="img/ind/index/blizzard.PNG" alt="" class="bli"/>
+			<div class="head-left">
+                 <div><a href="#">游戏</a></div>
+                 <div><a href="#">热门</a></div>
+                 <div><a href="#">新闻</a></div>
+                 <div><a href="#">电子竞技</a></div>
+			</div>
+			<div class="head-left head-right">
+				<div><a href="#">支持</a></div>
+				<div><a href="#">我的账户</a></div>
+			</div>
+		</header>
+		<div class="title">
+			<div class="round">
+				<img src="img/ind/index/banner/ban0.jpg" alt="">
+				<img src="img/ind/index/banner/ban1.jpg" alt="">
+				<img src="img/ind/index/banner/ban2.jpg" alt="">
+				<img src="img/ind/index/banner/ban3.jpg" alt="">
+				<img src="img/ind/index/banner/ban4.jpg" alt="">
+				<img src="img/ind/index/banner/ban5.jpg" alt="">
+				<img src="img/ind/index/banner/ban6.jpg" alt="">
+			</div>
+			<nav>
+				<div class="img" style=""></div>
+				<div class="nav-left">
+					<div><a href="">游戏</a></div>
+					<div><a href="">剧情故事</a></div>
+					<div><a href="">新闻</a></div>
+					<div><a href="">论坛</a></div>
+					<div><a href="">服务</a></div>
+				</div>
+				<div class="nav-left nav-right">
+					<div>  <img src="img/ind/index/search.png" alt="" />
+					      
+					</div>
+					<div><a href="">登录</a></div>
+					<div class="free"><a href="">免费体验</a></div>
+				</div>
+			</nav>
+			<div class="dd">
+			<div class="d1 forin"><h1>购买《争夺艾泽拉斯数字典藏礼包》</h1></div>
+			<div class="d2">
+				<h2 class="forin1">《魔兽世界》的史诗故事即将翻开新的篇章。探索即将登场的全新功能、玩法、剧情，
+					<br>以及更多内容！</h2>
+			</div>
+			<div class="d3">
+				<button class="know">了解更多</button>
+				<button class="buy">立即购买</button>
+			</div>
+			</div>
+			<div class="title0">
+				<div style="background:url(img/ind/title1.jpg);background-size:100% 100% " class="image">
+					<a href="">战争使者：吉安娜</a>
+					<div class="em"></div>
+				</div>
+				<div style="background:url(img/ind/title2.jpg);background-size:100% 100% " class="image">
+					<a href="">假日活动：战场</a>
+					<div class="em"></div>
+				</div>
+				<div style="background:url(img/ind/title3.jpg);background-size:100% 100%" class="image">
+					<a href="">《魔兽世界在线修正》</a>
+					<div class="em"></div>
+				</div>
+				<div style="background:url(img/ind/title4.jpg) ;background-size:100% 100%" class="image">
+					<a href="">《魔兽世界》最新补丁</a>
+					<div class="em"></div>
+				</div>
+			</div>
+		</div>
+		<!--
+		<div class="title0">
+			<div style="background:url(img/ind/title1.jpg);background-size:100% 100% ">
+				<a href="">战争使者：吉安娜</a>
+			</div>
+			<div style="background:url(img/ind/title2.jpg);background-size:100% 100% ">
+				<a href="">假日活动：战场</a>
+			</div>
+			<div style="background:url(img/ind/title3.jpg);background-size:100% 100%">
+				<a href="">《魔兽世界在线修正》</a>
+			</div>
+			<div style="background:url(img/ind/title4.jpg) ;background-size:100% 100%">
+				<a href="">《魔兽世界》最新补丁</a>
+			</div>
+		</div>-->
+	    <div class="bg1 image1" style="background:url(img/ind/bg1.jpg);background-size:100% 100%" >
+			<h1 class="forin font-tx">战争使者系列短片</h1>
+			<h2 class="forin1 font-tx">欢迎观看战争使者预告视频，讲述了他们是为何而战</h2>
+            <button class="know">立即观看</button>
+			<div class="em"></div>
+		</div>
+		<div class="bg1 image1" style="background:url(img/ind/bg2.jpg);background-size:100% 100%">
+			<h1 class="forin font-tx">生存指南</h1>
+			<h2 class="forin1 font-tx">了解即将到来的全新内容，包括游戏更新，装备强化 <br>，全新任务，战争模式</h2>
+			<button class="know">立即观看</button>
+			<div class="em"></div>
+		</div>
+		<div class="bg-3">
+			<div class="bor image">
+				<img src="img/ind/nav1.jpg" alt="">
+				<div class="em"></div>
+				<h2>《争霸艾泽拉斯》漫画</h2>
+				<h1>重逢</h1>
+			</div>
+			<div class="bor image"><img src="img/ind/nav2.jpg" alt=""><h2>《争霸艾泽拉斯》漫画</h2>
+				<div class="em"></div>
+				<h1>代言人</h1>
+			</div>
+
+			<div class="bor image"><img src="img/ind/nav3.jpg" alt=""><h2>《争霸艾泽拉斯》漫画</h2>
+				<div class="em"></div>
+				<h1>三姐妹</h1></div>
+		</div>
+		<div class="bg1 image1" style="background:url(img/ind/bg3.jpg);background-size:100% 100%">
+			<h1  class="forin font-tx">生存指南</h1>
+			<h2  class="forin1 font-tx">了解即将到来的全新内容，包括游戏更新，装备强化 <br>，全新任务，战争模式</h2>
+			<button class="know">立即观看</button>
+			<div class="em"></div>
+		</div>
+		<div class="bg1 image1" style="background:url(img/ind/bg4.jpg);background-size:100% 100%">
+			<h1 class="forin font-tx">生存指南</h1>
+			<h2 class="forin1 font-tx">了解即将到来的全新内容，包括游戏更新，装备强化 <br>，全新任务，战争模式</h2>
+			<button class="know">立即观看</button>
+			<div class="em"></div>
+		</div>
+		<div class="wrap">
+			<div><img src="img/ind/bg01.jpg" alt=""/><div class="em"></div></div>
+			<div><img src="img/ind/bg02.jpg" alt=""/><div class="em"></div></div>
+			<div><img src="img/ind/bg03.jpg" alt=""/><div class="em"></div></div>
+			<div><img src="img/ind/bg04.jpg" alt=""/><div class="em"></div></div>
+			<div><img src="img/ind/bg01.jpg" alt=""/><div class="em"></div></div>
+			<div><img src="img/ind/bg02.jpg" alt=""/><div class="em"></div></div>
+			<div><img src="img/ind/bg03.jpg" alt=""/><div class="em"></div></div>
+		</div>
+		<div class="bg1 image1" style="background:url(img/ind/bg5.jpg);background-size:100% 100%" >
+			<h1  class="forin font-tx">生存指南</h1>
+			<h2  class="forin1 font-tx">了解即将到来的全新内容，包括游戏更新，装备强化 <br>，全新任务，战争模式</h2>
+			<button class="know">立即观看</button>
+			<div class="em"></div>
+		</div>
+		<div class="foot1">
+			<div data-u="hr">
+				<div class="fli"><img src="img/ind/float/1.jpg" alt=""></div>
+				<div class="fli"><img src="img/ind/float/2.jpg" alt=""></div>
+				<div class="fli"><img src="img/ind/float/3.jpg" alt=""></div>
+				<div class="fli"><img src="img/ind/float/4.jpg" alt=""></div>
+				<div class="fli"><img src="img/ind/float/5.jpg" alt=""></div>
+				<div class="fli"><img src="img/ind/float/6.jpg" alt=""></div>
+				<div class="fli"><img src="img/ind/float/7.jpg" alt=""></div>
+				<div class="fli"><img src="img/ind/float/8.jpg" alt=""></div>
+				<div class="fli"><img src="img/ind/float/9.jpg" alt=""></div>
+				<div class="fli"><img src="img/ind/float/10.jpg" alt=""></div>
+				<div class="fli"><img src="img/ind/float/11.jpg" alt=""></div>
+				<div class="fli"><img src="img/ind/float/12.jpg" alt=""></div>
+				<div class="fli"><img src="img/ind/float/14.jpg" alt=""></div>
+				<div class="fli"><img src="img/ind/float/15.jpg" alt=""></div>
+				<div class="fli"><img src="img/ind/float/16.jpg" alt=""></div>
+			</div>
+			<div id="model"></div>
+		</div>
+		<div class="foot">
+			<canvas id="canvas"></canvas>
+			<img src="img/ind/index/foot-bli.PNG" alt="" id="log"/>
+			<div>
+				<a href="">工作机会</a>|<a href="">关于</a>|<a href="">支持</a>|
+				<a href="">媒体中心</a>|<a href="">API</a>|<a href="">安全中心</a>
+			</div>
+			<h6>©2018暴雪娱乐有限公司版权所有</h6>
+			<h6>由上海网之易网络科技发展有限公司运营。</h6>
+			<div>
+				<a href="">隐私</a>|
+				<a href="">法律条款</a>
+			</div>
+			<h6>沪网文〔2017〕9633-727号 &nbsp;&nbsp;&nbsp;&nbsp;增值电信业务经营许可证编号：沪B2－20080012</h6>
+			<h6>互联网违法和不良信息举报电话：0571-28090163&nbsp;&nbsp;&nbsp;&nbsp;沪公网安备：31011502002167</h6>
+			<h6>适龄提示：适合13岁及以上使用 &nbsp;&nbsp;&nbsp;&nbsp;家长监护工程>上海市网络游戏行业自律公约</h6>
+			<h6>上海市张江高科技园区碧波路690号5号楼301-A &nbsp;&nbsp;&nbsp;&nbsp;客服电话：0571-28090163</h6>
+			<h6>健康游戏忠告：抵制不良游戏 拒绝盗版游戏 注意自我保护 谨防受骗上当</h6>
+			<h6>适度游戏益脑 沉迷游戏伤身 合理安排时间 享受健康生活</h6>
+		</div>
+	</body>
+	<script src="js/jquery-3.2.1.js"></script>
+	<script src="js/float.js"></script>
+	<script src="js/index.js">
+	</script>
+	<script>
+		(function(){
+        function random(min,max){
+            return Math.random()*(max-min)+min;
+        }
+        var can=document.getElementById("canvas");
+        var ctx=can.getContext("2d");
+        var w=can.width=window.innerWidth;
+        var h=can.height=window.innerHeight;
+        var drops=[];
+        function drop(){}
+        drop.prototype={
+            init:function(){
+                this.x=random(0,w);
+                this.y=0;
+                this.l=random(0.8*h,0.9*h);
+                this.vy=random(4,5);
+                this.r=1;
+                this.vr=1;
+                this.a=1;
+                this.va=0.95;
+            },
+            draw:function(){
+                if(this.y>this.l){
+                    ctx.beginPath();
+                    ctx.arc(this.x,this.y,this.r,0,2*Math.PI);
+                    ctx.strokeStyle="rgba(0,255,255,"+this.a+")";
+                    ctx.stroke();
+                    if(this.a>0.03){
+                        this.r+=this.vr;
+                        if(this.r>50){
+                            this.a*=this.va;}
+                    }else{
+                        this.init();
+                    }
+                }else{
+                    ctx.fillStyle="rgb(0,255,255)";
+                    ctx.fillRect(this.x,this.y,2,10);
+                    this.y+=this.vy;
+                }
+            }
+        };
+        setInterval(function(){
+            var d1=new drop();
+            d1.init();
+            drops.push(d1);
+        },1000)
+        function task(){
+            ctx.fillStyle="rgba(0,0,0,0.1)";
+            ctx.fillRect(0,0,w,h);
+            for(var i=0;i<drops.length;i++){
+                drops[i].draw();
+            }
+            requestAnimationFrame(task);
+        }
+        task();
+        })();
+		(function(){
+            var oimg=document.querySelectorAll(".wrap img");
+            var inow=1;
+            var iTaget=0;
+            tab(inow);
+            function tab(n){
+                for(var i=0;i<3;i++){
+                    var  left=n-1-i;
+                    if(left<0){
+                        left=left+7;
+                    }
+                    //下标
+                    oimg[left].style.transform=`translateX(${-150*(i+1)}px) translateZ(${200-i*100}px) rotateY(30deg)`;
+                    var  right=n+1+i;
+                    if(right>6){
+                        right=right-7;
+                    }
+                    oimg[right].style.transform=`translateX(${150*(i+1)}px) translateZ(${200-i*100}px) rotateY(-30deg)`;
+                }
+                oimg[n].style.transform="translateZ(300px)";
+            }
+            //点击哪张图片就让哪张图片到中间
+            //如何知道我当前点击的是哪张图片
+            var middle=0;
+            var num=0;
+            for(var i=0; i<oimg.length;i++){
+                oimg[i].index=i;
+                oimg[i].onclick=function(ev){
+                    middle=document.documentElement.clientWidth/2;//中轴线
+                    //算出中线的位置
+                    num=ev.clientX;//获取的是鼠标达到屏幕左边的水平距离
+                    iTaget=this.index;
+                    if(middle<num){
+                        goNext();
+                    }else{
+                        goPrev();
+                    }
+                }
+            }
+//如果点击的是左边的三张,就让他从左边往中间靠
+//如果点击的是右边的三张,就让他从右边往中间靠
+            //鼠标的位置决定是在左边还是右边
+
+            function goNext(){
+                if(inow==iTaget){
+                    return;
+                }
+                inow++;
+                if(inow>6){
+                    inow=0;
+                }
+                tab(inow);
+                setTimeout(function(){
+                    goNext();
+                },700)
+
+            }
+            function goPrev(){
+                if(inow==iTaget){
+                    return;
+                }
+                inow--;
+                if(inow<0){
+                    inow=6;
+                }
+                tab(inow);
+                setTimeout(function(){
+                    goPrev();
+                },700)
+
+            }
+            //当前点击的那张到中间了,就不用递归了
+		})();
+
+	</script>
+</html>

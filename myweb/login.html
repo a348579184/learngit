@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style>
+			body{
+				padding:0;
+				margin:0;
+				font-size: 16px;
+			}
+			.img{
+				display: block;
+				padding-bottom: 30px;
+				text-align: center;
+			}
+			.bor{
+				margin:0 auto;
+				width: 300px;
+				padding: 20px 15%;
+				box-shadow: 2px 0 46px rgba(0, 0, 0, 0.18);
+			}
+			h1{
+				font-weight:bold;
+			}
+			.font_style{
+				font-size: 16px;
+				margin-top:50px;
+				margin-bottom: 20px;
+			}
+			.border{
+				margin-top:10px;
+				width: 350px;
+				height: 40px;
+				line-height: 40px;
+				border: 1px solid red;
+				font-size: 25px;
+				border-radius: 5px;
+				padding: 10px;
+			}
+			.border input{
+				display: block;
+				margin-left:10px;
+				vertical-align: center;
+				border: 1px solid white;
+				outline: medium;
+				font-size:25px;
+			}
+			div a{
+				color:black;
+			}
+			.tj{
+				display: block;
+				width: 370px;
+				height:50px;
+				font-size:30px;
+				line-height: 30px;
+				background: #f66f6a;
+				color: white;
+				border: none;
+				border-radius: 5px;
+				cursor:pointer;
+				margin-bottom:30px;
+			}
+			.aa{
+				display: block;
+				width: 370px;
+				text-align: center;
+				font-size: 20px;
+			}
+			#line{
+				width:370px;
+				border:1px solid gray;	
+				margin-bottom: 30px;
+				margin-top: 30px;	
+			}
+			.tishi{
+				padding-top: 15px;
+				color:#a54b4a;
+			}
+		</style>
+	</head>
+	<body>
+	
+	
+		<div  class="img"><img src="img/logo.jpg" alt=""/></div>
+		<div class="bor">
+			<h1>登录</h1>
+	
+			<div class="font_style">
+				<div>账号/邮箱</div>
+				<div class="border">
+					<input type="text" class="input" placeholder="请输入帐号/邮箱" id="uname" name="uname" onblur="check_uname()"/>
+				</div>
+				<div id="showuname" class="tishi"></div>
+			</div>
+			<div class="font_style">
+				<div>密码</div>
+				<div class="border"><input type="text" class="input" placeholder="请输入密码" id="upwd" name="upwd" onblur="check_upwd()"/></div>
+				<div id="showupwd" class="tishi"></div>
+			</div>
+			<div><a href="#">忘记密码</a></div>
+			<input type="button" value="登录" class="tj" onclick="login()"/>
+			<a href="register.html" class="aa">立即注册  ></a>
+			<div id="line"></div>
+			<p class="aa">通过其他方式登录：</p>
+			<div class="aa"><a href="#"><img src="img/weixin.jpg" alt="" /></a>
+			<a href="#"><img src="img/imgin.jpg" alt="" /></a></div>
+	<script src="js/common.js"></script>
+	<script>
+	  var $=function(i){
+			return document.getElementById(i);
+		}
+		var num=3;
+		var mi=300;
+		var uname=$("uname");
+		var upwd=$("upwd");
+		var showuname=$("showuname");
+		var showupwd=$("showupwd");
+		function check_uname(){
+			if(uname.value==""){
+				showuname.innerHTML="帐号/邮箱 不能为空！";
+			}else{showuname.innerHTML=""}
+		}
+		function check_upwd(){
+			if(upwd.value==""){
+				showupwd.innerHTML="密码 不能为空！";
+			}else{showupwd.innerHTML=""}
+		}
+		function login(){
+			if(uname.value!=""&&upwd.value!=""){
+			var xhr=createXhr();
+			xhr.onreadystatechange=function(){
+				if(xhr.readyState==4&&xhr.status==200){
+					var res=xhr.responseText;
+					if(res=="you"){
+						showupwd.innerHTML="登录成功！";
+            var href=location.href;
+						var i=href.indexOf("back");
+						href=href.slice(i+5,);
+						location.href=href+"?islogin"
+					}else{
+						if(num==0){
+							showupwd.innerHTML="您的账户已经被锁定请在"+mi+"秒后退出！";
+							mi--;
+							setTimeout("login()",1000);
+						}
+						else{
+							showupwd.innerHTML="帐号密码 错误您还可以尝试"+num+"次";
+						num--;}
+					}
+				}
+			}
+			xhr.open("get","php/login.php?uname="+uname.value+"&upwd="+upwd.value,true);
+			xhr.send(null);
+		}
+	}
+		
+	</script>
+	</body>
+</html>
