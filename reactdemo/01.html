@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/react.js"></script>
+    <script src="js/browser.min.js"></script>
+    <script src="js/react-dom.js"></script>
+    <script src="js/axios.js"></script>
+</head>
+<body>
+<div id='example'>
+</div>
+<script type='text/babel'>
+    var Button=React.createClass({
+        getInitialState:function(){
+            return {
+                text:'aaa',
+                abled:false,
+                msg:{},
+                isGet:false,
+                val:'点击获取'
+            }
+        },
+        btnClick:function(){
+            var a=this.state.abled?false:true;
+            this.setState({abled:a,val:'正在获取。。'});
+            var url='./02.js';
+            var i=0;
+            var fun=setInterval(()=>{
+                i++;
+                if(i>=2) {
+                    axios.get(url).then((result) => {
+                        var res = result.data;
+                        this.setState({msg: res, isGet: true,abled:false,val:'点击获取'});
+                        i=0;
+                        window.clearInterval(fun);
+                    })
+                }
+            },1000)
+        },
+        showM(){
+            var msg=this.state.msg;
+            var str='';
+                 for (var val in msg) {
+                     str += val + ":" + msg[val] + "\n";
+                 }
+            return str;
+        },
+        render:function(){
+            return <div>
+                <input type="button" value={this.state.val} onClick={this.btnClick}
+                       style={{width:'500px'}} disabled={this.state.abled}/>
+                <div style={{color:'gray'}}>（获取速度太快，加了定时器，延迟获取，方便看到效果）</div>
+                <div>
+                {
+                    this.state.isGet
+                    &&
+                    this.showM()
+                }
+                </div>
+            </div>
+        }
+    })
+    ReactDOM.render(
+            <Button></Button>,
+        document.getElementById('example')
+    );
+</script>
+
+</body>
+</html>
